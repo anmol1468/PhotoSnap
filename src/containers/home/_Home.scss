@@ -1,0 +1,31 @@
+.home {
+  &__stories {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+
+    @include respond(nine) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      // gap: -1rem;
+    }
+
+    @include respond(six) {
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__features {
+    display: flex;
+    padding: 8rem 2rem;
+    max-width: 100rem;
+    place-items: center;
+    margin: auto;
+
+    @include respond(nine) {
+      flex-direction: column;
+    }
+  }
+}

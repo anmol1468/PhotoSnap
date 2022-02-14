@@ -1,0 +1,33 @@
+.feature {
+  text-align: center;
+  display: flex;
+  height: 23rem;
+  // border: 1px solid red;
+  flex-direction: column;
+  justify-content: end;
+  padding-inline: 2rem;
+  align-items: center;
+
+  @include respond(nine) {
+    width: 70%;
+    justify-content: center;
+  }
+  @include respond(six) {
+    width: 80%;
+  }
+  @include respond(four) {
+    width: 90%;
+    height: auto;
+    padding-inline: 1rem;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    margin: 1.2rem 0;
+  }
+
+  &__description {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+  }
+}

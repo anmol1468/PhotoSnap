@@ -1,0 +1,22 @@
+.stories {
+  &__container {
+    background-color: #000;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+
+    @include respond(nine) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include respond(eight) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(six) {
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-columns: 1fr;
+    }
+  }
+}

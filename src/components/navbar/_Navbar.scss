@@ -1,0 +1,152 @@
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 2.3rem 8rem;
+  z-index: 1000;
+
+  &.dropdown {
+    position: absolute;
+    background-color: #fff;
+    opacity: 10;
+    display: flex;
+    left: 0;
+    flex-direction: column;
+    transition: all 3s;
+  }
+
+  @include respond(eight) {
+    padding: 3rem 5rem;
+  }
+  @include respond(seven) {
+    padding: 3rem 2rem;
+  }
+  @include respond(six) {
+    padding: 3rem 3rem;
+  }
+  @include respond(four) {
+    padding: 3rem 2rem;
+  }
+
+  &__logo {
+  }
+
+  &__logobox {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 3rem;
+  }
+
+  &__links {
+    display: flex;
+    width: 60%;
+
+    &.dropdown {
+      margin: 4rem 0 2rem 0;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #000;
+
+      li {
+        padding: 1rem 0;
+        font-weight: 700;
+        text-align: center;
+      }
+    }
+
+    @include respond(six) {
+      display: none;
+    }
+
+    &.dropdown {
+      @include respond(six) {
+        display: initial;
+      }
+    }
+
+    li {
+      margin: 0 1.5rem;
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: #000;
+        letter-spacing: 1px;
+        transition: 0.3s all;
+
+        &:hover {
+          color: rgb(223, 223, 223);
+        }
+      }
+    }
+  }
+
+  &__button {
+    color: #fff;
+    background-color: #000;
+    padding: 1rem 2rem;
+    border: none;
+    transition: 0.3s all;
+
+    &.dropdown {
+      width: 60%;
+    }
+
+    @include respond(six) {
+      display: none;
+    }
+
+    &.dropdown {
+      @include respond(six) {
+        display: initial;
+      }
+    }
+
+    &:hover {
+      background-color: rgb(223, 223, 223);
+      color: #000;
+    }
+  }
+
+  &__ham {
+    display: none;
+    font-size: 3rem;
+
+    @include respond(six) {
+      display: block;
+    }
+  }
+}
+
+//////////////
+// this code is for the animation on dropping down navigation bar
+
+.slide-bottom {
+  -webkit-animation: slide-bottom 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-bottom 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}

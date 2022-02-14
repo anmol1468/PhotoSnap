@@ -1,0 +1,72 @@
+.addOn {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  width: 100%;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  padding: 1.8rem 0;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+
+  @include respond(eight) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  &.heading {
+    border-color: #000;
+
+    @include respond(eight) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    span {
+      @include respond(eight) {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    text-align: left;
+    letter-spacing: 1.67px;
+
+    @include respond(eight) {
+      grid-column: 1 / span 3;
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__access {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    color: #000;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: grid;
+    grid-row: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+
+    @include respond(eight) {
+      justify-content: start;
+    }
+
+    p {
+      display: none;
+      font-size: 1.2rem;
+      line-height: 1.3rem;
+      letter-spacing: 1.67px;
+      color: #000;
+      opacity: 0.6rem;
+      padding-bottom: 1.3rem;
+
+      @include respond(eight) {
+        display: block;
+      }
+    }
+  }
+}

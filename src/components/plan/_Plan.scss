@@ -1,0 +1,77 @@
+.plan {
+  text-align: center;
+  padding: 3rem 2rem 4rem 2rem;
+
+  @include respond(eight) {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    text-align: left;
+  }
+  @include respond(seven) {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+  @include respond(six) {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  @include respond(five) {
+    display: block;
+    text-align: center;
+  }
+
+  &__name {
+    font-size: 2.4rem;
+    line-height: 2.5rem;
+    padding: 1rem 0;
+  }
+
+  &__description {
+    opacity: 0.6;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+
+    @include respond(eight) {
+      padding: 1rem 0;
+    }
+  }
+
+  &__price {
+    font-size: 4rem;
+    line-height: 4.8rem;
+    letter-spacing: 4.16667px;
+    padding: 2rem 0;
+
+    @include respond(eight) {
+      display: none;
+    }
+    @include respond(five) {
+      display: block;
+    }
+
+    &.outside {
+      display: none;
+
+      @include respond(eight) {
+        display: block;
+        text-align: right;
+      }
+      @include respond(five) {
+        display: none;
+      }
+    }
+
+    span {
+      opacity: 0.6;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      display: block;
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 0.6rem 0;
+    font-size: 1.2rem;
+    border: none;
+  }
+}

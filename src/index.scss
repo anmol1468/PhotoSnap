@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint == ten) {
+    @media (max-width: 62.5em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == nine) {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == eight) {
+    @media (max-width: 50em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == seven) {
+    @media (max-width: 43.75em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == sixPointFive) {
+    @media (max-width: 38.9375em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == six) {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == five) {
+    @media (max-width: 31.25em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == four) {
+    @media (max-width: 25em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == three) {
+    @media (max-width: 18.75em) {
+      @content;
+    }
+  }
+}
+
+@import "./components/navbar/Navbar";
+@import "./components/banner/banner";
+@import "./components/footer/Footer";
+@import "./components/story/Story";
+@import "./components/button/Button";
+@import "./components/feature/Feature";
+@import "./components/header/Header";
+@import "./components/beta/Beta";
+@import "./components/plan/Plan";
+@import "./components/addOn/AddOn";
+@import "./components/slider/Slider";
+
+@import "./containers/home/Home";
+@import "./containers/stories/Stories";
+@import "./containers/features/Features";
+@import "./containers/pricing/Pricing";
+@import "./containers/features/Features";
