@@ -11,7 +11,7 @@ const Plan = ({name, description, price, dark, main, term}) => {
       <div>
     <h3 className="plan__name">{name}</h3>
     <p className="plan__description" >{description}</p>
-    <h2 className='plan__price'>{`$${price}`} <span>{`per ${term=="Monthly"? "month": 'year'}`}</span></h2>
+    <h2 className='plan__price'>{`$${price}`} <span>{`per ${term==="Monthly"? "month": 'year'}`}</span></h2>
     <button style={{
       backgroundColor: !dark? '#000': '#fff',
       color: dark? '#000': '#fff'
