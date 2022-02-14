@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from '../button/Button';
-import Logo from '../../assets/shared/desktop/logo.svg';
 import {Link} from 'react-router-dom';
 import {AiFillFacebook, AiFillYoutube, AiFillTwitterCircle} from 'react-icons/ai';
 import {BsPinterest, BsInstagram} from 'react-icons/bs';
@@ -41,3 +40,4 @@ const Footer = () => {
 };
 
 export default Footer;
+// okay nice 
