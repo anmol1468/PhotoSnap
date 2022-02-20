@@ -4,7 +4,7 @@ import Button from '../button/Button';
 
 const Banner = ({title, description, btnAction, photo, flip, dark}) => {
   return (
-    <div className='banner' style={{flexDirection:flip? "row-reverse": "row"}}>
+    <div className={`banner`} style={{flexDirection:flip? "row-reverse": "row"}}>
       <div className="banner__text" style={{backgroundColor: dark? '#000': '#fff',color:dark ? '#fff': '#000'}}>
         <h1>{title}</h1>
         <p>{description}</p>
